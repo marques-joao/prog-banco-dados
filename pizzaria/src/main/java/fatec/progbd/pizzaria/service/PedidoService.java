@@ -1,6 +1,7 @@
 package fatec.progbd.pizzaria.service;
 
 import fatec.progbd.pizzaria.entity.Entrega;
+import fatec.progbd.pizzaria.entity.ItemPedido;
 import fatec.progbd.pizzaria.entity.Pedido;
 
 import java.math.BigDecimal;
@@ -13,6 +14,6 @@ public interface PedidoService {
     void atualizarPedido(Pedido pedido);
     List<Pedido> listarPedidos();
 
-    BigDecimal calcularTotal(Pedido pedido);
+    BigDecimal calcularTotal(List<ItemPedido> itens);
     String verificarStatusEntrega(Entrega entrega);
 }

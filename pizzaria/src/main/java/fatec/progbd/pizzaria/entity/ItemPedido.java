@@ -26,4 +26,9 @@ public class ItemPedido {
     @JoinColumn(name = "pedido_id")
     private Pedido pedido;
 
+    public ItemPedido(String descricao, BigDecimal precoUnitario, int quantidade) {
+        this.descricao = descricao;
+        this.precoUnitario = precoUnitario;
+        this.quantidade = quantidade;
+    }
 }

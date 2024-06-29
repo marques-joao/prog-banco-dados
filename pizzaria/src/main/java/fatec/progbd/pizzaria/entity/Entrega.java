@@ -21,6 +21,7 @@ public class Entrega {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private LocalDate dataEntrega;
     private LocalTime horaEntrega;
     private String tipoPagamento;
@@ -33,5 +34,12 @@ public class Entrega {
     @OneToMany(mappedBy = "entrega", cascade = CascadeType.ALL)
     private List<Pedido> pedidos = new ArrayList<>();
 
+    public Entrega(LocalDate dataEntrega, LocalTime horaEntrega, String tipoPagamento, String codigoDeEntrega, StatusEntrega statusEntrega) {
+        this.dataEntrega = dataEntrega;
+        this.horaEntrega = horaEntrega;
+        this.tipoPagamento = tipoPagamento;
+        this.codigoDeEntrega = codigoDeEntrega;
+        this.statusEntrega = statusEntrega;
+    }
 
 }

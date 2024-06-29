@@ -1,7 +1,6 @@
 package fatec.progbd.pizzaria.service.impl;
 
 import fatec.progbd.pizzaria.entity.Entrega;
-import fatec.progbd.pizzaria.entity.Pedido;
 import fatec.progbd.pizzaria.entity.StatusEntrega;
 import fatec.progbd.pizzaria.repository.EntregaRepository;
 import fatec.progbd.pizzaria.repository.PedidoRepository;
@@ -50,4 +49,5 @@ public class EntregaServiceImpl implements EntregaService {
         Entrega entrega = entregaRepository.findById(entregaId).orElseThrow(() -> new IllegalArgumentException("Entrega não encontrada."));
         return entrega.isPagamentoConfirmado();
     }
+
 }

@@ -1,6 +1,7 @@
 package fatec.progbd.pizzaria.service.impl;
 
 import fatec.progbd.pizzaria.entity.Entrega;
+import fatec.progbd.pizzaria.entity.ItemPedido;
 import fatec.progbd.pizzaria.entity.Pedido;
 import fatec.progbd.pizzaria.repository.PedidoRepository;
 import fatec.progbd.pizzaria.service.PedidoService;
@@ -37,8 +38,8 @@ public class PedidoServiceImpl implements PedidoService {
     }
 
     @Override
-    public BigDecimal calcularTotal(Pedido pedido) {
-        return pedido.getItens().stream()
+    public BigDecimal calcularTotal(List<ItemPedido> itens) {
+        return itens.stream()
                 .map(item -> item.getPrecoUnitario().multiply(BigDecimal.valueOf(item.getQuantidade())))
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
     }

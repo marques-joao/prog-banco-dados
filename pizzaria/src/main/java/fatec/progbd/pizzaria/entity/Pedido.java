@@ -22,6 +22,7 @@ public class Pedido {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private LocalDate data;
     private LocalTime hora;
     private int quantidadeItens;
@@ -37,5 +38,15 @@ public class Pedido {
 
     @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL)
     private List<ItemPedido> itens = new ArrayList<>();
+
+    public Pedido(Cliente cliente, Entrega entrega, LocalDate data, LocalTime hora, List<ItemPedido> itens, int quantidadeItens, BigDecimal valorTotal) {
+        this.cliente = cliente;
+        this.entrega = entrega;
+        this.data = data;
+        this.hora = hora;
+        this.itens = itens;
+        this.quantidadeItens = quantidadeItens;
+        this.valorTotal = valorTotal;
+    }
 
 }
