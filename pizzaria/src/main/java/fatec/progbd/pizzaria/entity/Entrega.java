@@ -25,8 +25,13 @@ public class Entrega {
     private LocalTime horaEntrega;
     private String tipoPagamento;
     private String codigoDeEntrega;
+    private boolean pagamentoConfirmado;
+
+    @Enumerated(EnumType.STRING)
+    private StatusEntrega statusEntrega;
 
     @OneToMany(mappedBy = "entrega", cascade = CascadeType.ALL)
     private List<Pedido> pedidos = new ArrayList<>();
+
 
 }
