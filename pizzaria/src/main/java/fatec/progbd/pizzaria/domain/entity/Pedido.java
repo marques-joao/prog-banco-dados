@@ -1,4 +1,4 @@
-package fatec.progbd.pizzaria.entity;
+package fatec.progbd.pizzaria.domain.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -9,7 +9,6 @@ import lombok.Setter;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -37,16 +36,6 @@ public class Pedido {
     private Entrega entrega;
 
     @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL)
-    private List<ItemPedido> itens = new ArrayList<>();
-
-    public Pedido(Cliente cliente, Entrega entrega, LocalDate data, LocalTime hora, List<ItemPedido> itens, int quantidadeItens, BigDecimal valorTotal) {
-        this.cliente = cliente;
-        this.entrega = entrega;
-        this.data = data;
-        this.hora = hora;
-        this.itens = itens;
-        this.quantidadeItens = quantidadeItens;
-        this.valorTotal = valorTotal;
-    }
+    private List<ItemPedido> itens;
 
 }

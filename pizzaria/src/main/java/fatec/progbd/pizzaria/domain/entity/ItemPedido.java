@@ -1,4 +1,4 @@
-package fatec.progbd.pizzaria.entity;
+package fatec.progbd.pizzaria.domain.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -26,9 +26,4 @@ public class ItemPedido {
     @JoinColumn(name = "pedido_id")
     private Pedido pedido;
 
-    public ItemPedido(String descricao, BigDecimal precoUnitario, int quantidade) {
-        this.descricao = descricao;
-        this.precoUnitario = precoUnitario;
-        this.quantidade = quantidade;
-    }
 }

@@ -1,8 +1,8 @@
 package fatec.progbd.pizzaria.service;
 
-import fatec.progbd.pizzaria.entity.Entrega;
-import fatec.progbd.pizzaria.entity.ItemPedido;
-import fatec.progbd.pizzaria.entity.Pedido;
+import fatec.progbd.pizzaria.domain.entity.Entrega;
+import fatec.progbd.pizzaria.domain.entity.ItemPedido;
+import fatec.progbd.pizzaria.domain.entity.Pedido;
 
 import java.math.BigDecimal;
 import java.util.List;

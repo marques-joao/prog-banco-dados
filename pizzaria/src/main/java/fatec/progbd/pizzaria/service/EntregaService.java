@@ -1,6 +1,6 @@
 package fatec.progbd.pizzaria.service;
 
-import fatec.progbd.pizzaria.entity.Entrega;
+import fatec.progbd.pizzaria.domain.entity.Entrega;
 
 import java.util.List;
 

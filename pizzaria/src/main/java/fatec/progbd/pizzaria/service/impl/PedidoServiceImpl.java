@@ -1,8 +1,8 @@
 package fatec.progbd.pizzaria.service.impl;
 
-import fatec.progbd.pizzaria.entity.Entrega;
-import fatec.progbd.pizzaria.entity.ItemPedido;
-import fatec.progbd.pizzaria.entity.Pedido;
+import fatec.progbd.pizzaria.domain.entity.Entrega;
+import fatec.progbd.pizzaria.domain.entity.ItemPedido;
+import fatec.progbd.pizzaria.domain.entity.Pedido;
 import fatec.progbd.pizzaria.repository.PedidoRepository;
 import fatec.progbd.pizzaria.service.PedidoService;
 import lombok.RequiredArgsConstructor;

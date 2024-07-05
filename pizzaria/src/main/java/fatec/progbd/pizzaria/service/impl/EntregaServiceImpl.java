@@ -1,7 +1,7 @@
 package fatec.progbd.pizzaria.service.impl;
 
-import fatec.progbd.pizzaria.entity.Entrega;
-import fatec.progbd.pizzaria.entity.StatusEntrega;
+import fatec.progbd.pizzaria.domain.entity.Entrega;
+import fatec.progbd.pizzaria.domain.enums.StatusEntrega;
 import fatec.progbd.pizzaria.repository.EntregaRepository;
 import fatec.progbd.pizzaria.repository.PedidoRepository;
 import fatec.progbd.pizzaria.service.EntregaService;

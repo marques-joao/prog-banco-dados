@@ -1,4 +1,4 @@
-package fatec.progbd.pizzaria.entity;
+package fatec.progbd.pizzaria.domain.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -26,13 +25,6 @@ public class Cliente {
     private String codigoDeEntrega;
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
-    private List<Pedido> pedidos = new ArrayList<>();
-
-    public Cliente(String nome, String telefone, String endereco, String codigoDeEntrega) {
-        this.nome = nome;
-        this.telefone = telefone;
-        this.endereco = endereco;
-        this.codigoDeEntrega = codigoDeEntrega;
-    }
+    private List<Pedido> pedidos;
 
 }
