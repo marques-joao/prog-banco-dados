@@ -10,7 +10,6 @@ public record EntregaRequest(
         LocalTime horaEntrega,
         String tipoPagamento,
         String codigoDeEntrega,
-        String enderecoEntrega,
         StatusEntrega statusEntrega,
         boolean pagamentoConfirmado
 ) {}

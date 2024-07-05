@@ -11,7 +11,7 @@ public interface ClienteService {
 
     ClienteResponse adicionarCliente(ClienteRequest clienteRequest);
 
-    List<Cliente> listarClientes();
+    List<ClienteResponse> listarClientes();
 
     Cliente atualizarCliente(Long clienteId, Cliente clienteAtualizado);
 
@@ -19,6 +19,6 @@ public interface ClienteService {
 
     void adicionarPedido(Long clienteId, Pedido pedido);
 
-    List<Pedido> getPedidos(Long clienteId);
+    List<Pedido> listarPedidos(Long clienteId);
 
 }

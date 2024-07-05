@@ -9,7 +9,6 @@ import lombok.Setter;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -31,7 +30,8 @@ public class Entrega {
     @Enumerated(EnumType.STRING)
     private StatusEntrega statusEntrega;
 
-    @OneToMany(mappedBy = "entrega", cascade = CascadeType.ALL)
-    private List<Pedido> pedidos;
+    @OneToOne
+    @JoinColumn(name = "pedido_id")
+    private Pedido pedido;
 
 }

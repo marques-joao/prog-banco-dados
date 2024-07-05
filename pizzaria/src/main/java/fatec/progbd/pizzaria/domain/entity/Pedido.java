@@ -31,8 +31,7 @@ public class Pedido {
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;
 
-    @ManyToOne
-    @JoinColumn(name = "entrega_id")
+    @OneToOne(mappedBy = "pedido", cascade = CascadeType.ALL, orphanRemoval = true)
     private Entrega entrega;
 
     @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL)

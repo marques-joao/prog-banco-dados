@@ -9,11 +9,16 @@ import java.util.List;
 
 public interface PedidoService {
 
-    void adicionarPedido(Pedido pedido);
-    void removerPedido(Long id);
-    void atualizarPedido(Pedido pedido);
+    Void adicionarPedido(Long clienteId, Pedido pedido);
+
     List<Pedido> listarPedidos();
 
-    BigDecimal calcularTotal(List<ItemPedido> itens);
-    String verificarStatusEntrega(Entrega entrega);
+    Pedido atualizarPedido(Long clienteId, Pedido pedidoAtualizado);
+
+    void removerPedido(Long pedidoId);
+
+    BigDecimal calcularTotal(Long pedidoId);
+
+    String verificarStatusEntrega(Long pedidoId);
+
 }
